@@ -4,6 +4,7 @@ import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/
 import { Layout, Menu, theme } from 'antd';
 import HeaderComponents from './Header';
 import FooterComponents from './Footer';
+import { Outlet } from 'react-router-dom';
 const { Content, Sider } = Layout;
 
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
@@ -30,7 +31,8 @@ const App = () => {
      <HeaderComponents/>
       <Content
         style={{
-          padding: '0 48px',
+          padding: '12px 48px',
+          display:'flex'
         }}
       >
         <Layout
@@ -63,7 +65,10 @@ const App = () => {
             }}
           >
           </Content>
+
+          <Outlet/>
         </Layout>
+
       </Content>
       <FooterComponents/>
     </Layout>

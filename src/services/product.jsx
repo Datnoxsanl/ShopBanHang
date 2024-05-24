@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export function getProdcuts(){
+export function getProdcuts(page,size,fSoft){
     return axios({
-        url: `/products?${query}&populate=*&pagination[pageSize]=${size}&pagination[page]=${page}&sort=${fSort}:desc`
+        url: `/products?populate=*&pagination[pageSize]=${size}&pagination[page]=${page}&sort=${fSoft}:desc`
     })
 }
