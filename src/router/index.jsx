@@ -4,6 +4,7 @@ import {
 import BaseLayout from "../component/Layout/BaseLayout";
 import Home from "../pages/home";
 import Login from "../pages/login"
+import ProductDetail from "../pages/productDetail";
 const router = createBrowserRouter([
   {
       path: "/",
@@ -15,7 +16,10 @@ const router = createBrowserRouter([
       {
           path: '/login',
           element: <Login/>
-      }]
+      },      {
+        path: '/sanpham/:slug',
+        element: <ProductDetail/>
+    }]
   },
 ]);  
 

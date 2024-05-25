@@ -1,7 +1,7 @@
 import { getProdcuts } from "../../services/product";
 import useFetching from "../../customhooks/useFetching";
 import { Row, Col, Card, Pagination } from "antd";
-import Link from "antd/es/typography/Link";
+import {Link} from "react-router-dom";
 const { VITE_BASE_API_URL } = import.meta.env;
 const { Meta } = Card;
 function ProductList(props) {
@@ -35,7 +35,7 @@ function ProductList(props) {
           let description = items?.attributes?.description;
           return (
             <Col span={6} key={items?.id}>
-              <Link>
+              <Link to ={ `/sanpham/${items?.attributes?.slug}`}>
                 <Card
                   hoverable
                   cover={<img alt="example" src={imgUrl} />}
